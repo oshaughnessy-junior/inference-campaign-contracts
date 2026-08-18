@@ -9,6 +9,10 @@ evaluation request with a result. It is intentionally synthetic. It does not
 execute RIFT, SuperNu, HyperPipe, a simulation manager, or any scientific
 runtime, and it supplies no cross-domain evidence.
 
+The canonical byte-identical schema is packaged at
+`src/inference_campaign_contracts/schemas/evaluation-record-draft-v0.schema.json`.
+The JSON files here are synthetic acceptance fixtures and documentation only.
+
 ## What the draft carries
 
 - a vocabulary version and record type;

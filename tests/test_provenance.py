@@ -24,17 +24,13 @@ class ProvenanceTests(unittest.TestCase):
             payload = (ROOT / destination).read_bytes()
             self.assertEqual(hashlib.sha256(payload).hexdigest(), item["sha256"])
 
-    def test_repository_shell_has_no_build_or_package_metadata(self):
-        forbidden = {
-            "build-system",
-            "setup.py",
-            "setup.cfg",
-            "pyproject.toml",
-            "requirements.txt",
-            "tox.ini",
-        }
-        observed = {path.name for path in ROOT.iterdir()}
-        self.assertTrue(forbidden.isdisjoint(observed), observed)
+    def test_package_scaffold_has_no_runtime_dependency_or_legacy_build_files(self):
+        metadata = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+        self.assertIn('requires-python = ">=3.9"', metadata)
+        self.assertIn("dependencies = []", metadata)
+        self.assertIn('version = "0.1.0a1"', metadata)
+        for name in ("setup.py", "setup.cfg", "requirements.txt", "tox.ini"):
+            self.assertFalse((ROOT / name).exists(), name)
 
 
 if __name__ == "__main__":

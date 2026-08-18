@@ -9,7 +9,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REFERENCE = ROOT / "contracts" / "controller-assimilation-v0" / "reference.py"
+REFERENCE = ROOT / "src" / "inference_campaign_contracts" / "assimilation_v0.py"
 
 
 class ImportIsolationTests(unittest.TestCase):

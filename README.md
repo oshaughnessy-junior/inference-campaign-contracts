@@ -13,10 +13,11 @@ conformance or scientific validation. Both contracts remain experimental.
 
 ## Scope
 
-This source-only repository contains schemas, synthetic reference fixtures,
-the reference reducer, normative documentation, acceptance tests, and source
-provenance. It is not an installable package and publishes no release or stable
-API.
+This repository contains schemas, synthetic reference fixtures, the reference
+reducer, normative documentation, acceptance tests, and source provenance. It
+has an experimental Python package scaffold for local wheel validation, but it
+publishes no release or stable API. The package root intentionally exports no
+convenience interface.
 
 It deliberately contains no RIFT, SuperNu, or population-inference adapter;
 domain schema; proposal policy; scheduler; transport; archive implementation;
@@ -24,8 +25,8 @@ native fixture; campaign record; or historical run evidence. Project adapters
 and scientific semantics remain owned by their respective projects.
 
 No project should vendor these files or add this repository as a production
-dependency yet. Packaging, release, project adoption, and drift-registry edges
-require separate reviewed issues.
+dependency yet. Release, project adoption, and drift-registry edges require
+separate reviewed issues.
 
 ## Validation
 
@@ -37,7 +38,8 @@ python -m unittest discover -s tests -p 'test_*.py'
 
 If the optional test-only `jsonschema` library is present, the same command also
 checks both Draft 2020-12 schemas and the synthetic positive/negative examples.
-The reducer itself imports only the Python standard library.
+The reducer itself imports only the Python standard library. Package build
+requirements are build-time only; the project declares no runtime dependency.
 
 ## Ownership
 

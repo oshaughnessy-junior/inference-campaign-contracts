@@ -11,7 +11,9 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / "contracts" / "controller-assimilation-v0"
-SPEC = importlib.util.spec_from_file_location("assimilation_v0", CONTRACT / "reference.py")
+PACKAGE = ROOT / "src" / "inference_campaign_contracts"
+TRANSITION_SCHEMA = PACKAGE / "schemas" / "campaign-assimilation-v0.schema.json"
+SPEC = importlib.util.spec_from_file_location("assimilation_v0", PACKAGE / "assimilation_v0.py")
 assimilation = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(assimilation)
 
@@ -147,7 +149,7 @@ class AssimilationContractTests(unittest.TestCase):
         ]
 
     def test_closed_schema_declares_bounded_orderless_transition(self):
-        schema = json.loads((CONTRACT / "transition.schema.json").read_text())
+        schema = json.loads(TRANSITION_SCHEMA.read_text())
         self.assertFalse(schema["additionalProperties"])
         self.assertEqual(schema["properties"]["decisions"]["minItems"], 1)
         self.assertEqual(schema["properties"]["decisions"]["maxItems"], 10000)
@@ -177,14 +179,13 @@ class AssimilationContractTests(unittest.TestCase):
     @unittest.skipIf(Draft202012Validator is None, "jsonschema is not installed")
     def test_real_draft202012_instances_match_schema(self):
         transition_schema = json.loads(
-            (CONTRACT / "transition.schema.json").read_text(encoding="utf-8")
+            TRANSITION_SCHEMA.read_text(encoding="utf-8")
         )
         evaluation_schema = json.loads(
             (
-                ROOT
-                / "contracts"
-                / "evaluation-record-draft-v0"
-                / "envelope.schema.json"
+                PACKAGE
+                / "schemas"
+                / "evaluation-record-draft-v0.schema.json"
             ).read_text(encoding="utf-8")
         )
         Draft202012Validator.check_schema(transition_schema)
