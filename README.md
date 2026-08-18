@@ -16,8 +16,10 @@ conformance or scientific validation. Both contracts remain experimental.
 This repository contains schemas, synthetic reference fixtures, the reference
 reducer, normative documentation, acceptance tests, and source provenance. It
 has an experimental Python package scaffold for local wheel validation, but it
-publishes no release or stable API. The package root intentionally exports no
-convenience interface.
+publishes no stable release or stable API. A validation artifact may be
+published only when separately authorized and must be explicitly marked as a
+GitHub pre-release. This README authorizes no publication. The package root
+intentionally exports no convenience interface.
 
 It deliberately contains no RIFT, SuperNu, or population-inference adapter;
 domain schema; proposal policy; scheduler; transport; archive implementation;
