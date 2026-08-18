@@ -9,7 +9,13 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = ROOT / "contracts" / "evaluation-record-draft-v0"
-SCHEMA_PATH = FIXTURES / "envelope.schema.json"
+SCHEMA_PATH = (
+    ROOT
+    / "src"
+    / "inference_campaign_contracts"
+    / "schemas"
+    / "evaluation-record-draft-v0.schema.json"
+)
 VALID = FIXTURES / "valid"
 INVALID = FIXTURES / "invalid"
 

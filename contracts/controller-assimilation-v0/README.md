@@ -11,6 +11,10 @@ revision, and commits exactly the next revision. It contains between 1 and
 10,000 decisions. Decision array order has no semantic meaning. Multiple
 commits may name the same iteration.
 
+The canonical byte-identical schema and reducer are located at
+`src/inference_campaign_contracts/schemas/campaign-assimilation-v0.schema.json`
+and `src/inference_campaign_contracts/assimilation_v0.py`.
+
 Each decision correlates a request ID, logical evaluation ID, result ID, and
 attempt number against separately supplied request and result records. Their
 domain-contract identifiers must also match. Correlation is not inferred from

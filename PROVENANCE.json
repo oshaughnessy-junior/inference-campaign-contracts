@@ -7,7 +7,7 @@
   },
   "byte_identical": [
     {
-      "destination": "contracts/evaluation-record-draft-v0/envelope.schema.json",
+      "destination": "src/inference_campaign_contracts/schemas/evaluation-record-draft-v0.schema.json",
       "source_path": "vision/contracts/evaluation-record-draft-v0/envelope.schema.json",
       "source_blob": "60294f47048d31322c60816d612d62dd332ca88f",
       "sha256": "2bb0ade59efbf0308ac8886367cc0403f3c1299b03c705097037ebe10be04c59"
@@ -49,13 +49,13 @@
       "sha256": "415546dcd34ccc5edfbc6464670e38273167dffbf8d4b2059bf1b8117b5166ef"
     },
     {
-      "destination": "contracts/controller-assimilation-v0/transition.schema.json",
+      "destination": "src/inference_campaign_contracts/schemas/campaign-assimilation-v0.schema.json",
       "source_path": "vision/contracts/controller-assimilation-v0/transition.schema.json",
       "source_blob": "34aa82425fdc3cee9c252fc2e57e40658633587a",
       "sha256": "12baba5b29764c07663d707215e3673d5ed870e10ed7c3764dee7cbe8d5009d5"
     },
     {
-      "destination": "contracts/controller-assimilation-v0/reference.py",
+      "destination": "src/inference_campaign_contracts/assimilation_v0.py",
       "source_path": "vision/contracts/controller-assimilation-v0/reference.py",
       "source_blob": "5211cf96668cd532f6ee912e5943dd209cea4679",
       "sha256": "9bc6275b1018d8e3882b12d39b005a1296206b80e22fb24bd13e4dde262d9eef"
@@ -102,7 +102,7 @@
     "native science data and fixtures",
     "RIFT and non-GW adapters",
     "historical proof artifacts",
-    "package and build metadata",
-    "releases and adopter integrations"
+    "generated build outputs and published releases",
+    "adopter integrations"
   ]
 }
