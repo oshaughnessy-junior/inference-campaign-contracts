@@ -1,0 +1,108 @@
+{
+  "format": "inference-campaign-contracts-provenance/v1",
+  "source": {
+    "repository": "https://github.com/oshaughnessy-junior/research-projects-RIT",
+    "commit": "3805ded8ae2d94cc45b56c0037a83afb176277c6",
+    "branch_at_extraction": "rift_O4d_vision_implentation"
+  },
+  "byte_identical": [
+    {
+      "destination": "contracts/evaluation-record-draft-v0/envelope.schema.json",
+      "source_path": "vision/contracts/evaluation-record-draft-v0/envelope.schema.json",
+      "source_blob": "60294f47048d31322c60816d612d62dd332ca88f",
+      "sha256": "2bb0ade59efbf0308ac8886367cc0403f3c1299b03c705097037ebe10be04c59"
+    },
+    {
+      "destination": "contracts/evaluation-record-draft-v0/valid/request.json",
+      "source_path": "vision/contracts/evaluation-record-draft-v0/valid/request.json",
+      "source_blob": "a11c378e871fc10d5bcd83cafdb8b0bbe7ce889e",
+      "sha256": "c126c31da379868465e07c8ece6e7c2d54f07b08e9061841a1850aa4bad96bf3"
+    },
+    {
+      "destination": "contracts/evaluation-record-draft-v0/valid/result-complete.json",
+      "source_path": "vision/contracts/evaluation-record-draft-v0/valid/result-complete.json",
+      "source_blob": "666b7f602f6bd3e3bf46168f6fcc1f98e5db6e56",
+      "sha256": "075120d2bd403fa2bb67d4e74d5de84b759ab9a57587c1048faa677406facb75"
+    },
+    {
+      "destination": "contracts/evaluation-record-draft-v0/valid/result-indeterminate.json",
+      "source_path": "vision/contracts/evaluation-record-draft-v0/valid/result-indeterminate.json",
+      "source_blob": "fb37973e83dec5d5df96d6a13b938b265eef9231",
+      "sha256": "eb30168e8302335fad9b5944bff2e15c3acb62358732b7e6cce56470dd6d47ad"
+    },
+    {
+      "destination": "contracts/evaluation-record-draft-v0/invalid/request-missing-domain-version.json",
+      "source_path": "vision/contracts/evaluation-record-draft-v0/invalid/request-missing-domain-version.json",
+      "source_blob": "650eb9ad527101c60cd2509c8bc7d1ccd50d810b",
+      "sha256": "d60c3a60aecea921c6d736c809bab0d00de3088d08d9d29f586c16e4b5f72abe"
+    },
+    {
+      "destination": "contracts/evaluation-record-draft-v0/invalid/result-complete-missing-payload.json",
+      "source_path": "vision/contracts/evaluation-record-draft-v0/invalid/result-complete-missing-payload.json",
+      "source_blob": "59366426609376c6139bc9daf3187d9c768b7994",
+      "sha256": "e2c2daa473110c2f703bed20425c2aafb5df2d9d3cc1c445d3015b10d4a3f46a"
+    },
+    {
+      "destination": "contracts/evaluation-record-draft-v0/invalid/result-failed-with-payload.json",
+      "source_path": "vision/contracts/evaluation-record-draft-v0/invalid/result-failed-with-payload.json",
+      "source_blob": "c85ca0d18e61e3d4243fb9ef2d8f19bd984c4dfd",
+      "sha256": "415546dcd34ccc5edfbc6464670e38273167dffbf8d4b2059bf1b8117b5166ef"
+    },
+    {
+      "destination": "contracts/controller-assimilation-v0/transition.schema.json",
+      "source_path": "vision/contracts/controller-assimilation-v0/transition.schema.json",
+      "source_blob": "34aa82425fdc3cee9c252fc2e57e40658633587a",
+      "sha256": "12baba5b29764c07663d707215e3673d5ed870e10ed7c3764dee7cbe8d5009d5"
+    },
+    {
+      "destination": "contracts/controller-assimilation-v0/reference.py",
+      "source_path": "vision/contracts/controller-assimilation-v0/reference.py",
+      "source_blob": "5211cf96668cd532f6ee912e5943dd209cea4679",
+      "sha256": "9bc6275b1018d8e3882b12d39b005a1296206b80e22fb24bd13e4dde262d9eef"
+    },
+    {
+      "destination": "LICENSE.md",
+      "source_path": "LICENSE.md",
+      "source_blob": "30a4df56b62b0b198e652c048c74768adb0f9ae6",
+      "sha256": "74cf70d48a22cee21200546888d5c73e6630f6834718681303ee8c593302cea8"
+    }
+  ],
+  "adapted": [
+    {
+      "destination": "contracts/evaluation-record-draft-v0/README.md",
+      "source_path": "vision/contracts/evaluation-record-draft-v0/README.md",
+      "source_blob": "70c57ed8855b40f272c517f81ad61687aa9af5ca",
+      "source_sha256": "8cc40322beee209c44ff9a446f138d3bf0c1e79c2b8b907ff762cc8b2e568c24",
+      "adaptation": "neutral-source status and retained-URN ownership clarification"
+    },
+    {
+      "destination": "contracts/controller-assimilation-v0/README.md",
+      "source_path": "vision/contracts/controller-assimilation-v0/README.md",
+      "source_blob": "d276e6b66740d3cf8dbb008b53371a500933c776",
+      "source_sha256": "c4456d5553891adb788f754d635c055ba581019d488e9d90388f7d8cf4838f0a",
+      "adaptation": "neutral-source ownership and experimental-adoption status"
+    },
+    {
+      "destination": "tests/test_evaluation_record_draft.py",
+      "source_path": "MonteCarloMarginalizeCode/Code/test/vision/test_evaluation_record_draft.py",
+      "source_blob": "4aa668e2873fcfed7ec7c945197c673c67695f87",
+      "source_sha256": "137b1dd90516b445ec4604b03c2e8cfc02e7d0aaf915f2c0d1789aeb03a331a0",
+      "adaptation": "repository-relative contract root only"
+    },
+    {
+      "destination": "tests/test_controller_assimilation_v0.py",
+      "source_path": "MonteCarloMarginalizeCode/Code/test/vision/test_controller_assimilation_v0.py",
+      "source_blob": "5ca470b4c94b7fb000f26c56bf33ea7078351f28",
+      "source_sha256": "4a623e0c290fd216c1b53a513e6e128769e9c758a5e2b9ee9198144ad75d9d61",
+      "adaptation": "repository-relative contract root only"
+    }
+  ],
+  "excluded": [
+    "private gate evidence",
+    "native science data and fixtures",
+    "RIFT and non-GW adapters",
+    "historical proof artifacts",
+    "package and build metadata",
+    "releases and adopter integrations"
+  ]
+}
